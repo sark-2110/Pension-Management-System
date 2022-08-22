@@ -1,0 +1,44 @@
+<div class="bootstrap-wrapper">
+    <br>
+    <div class="container mt" style="box-shadow: 5px 10px 18px #888888; width: 36%;">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img style="width: 100px;" class="img-fluid" src="/assets/profile.png" alt="">
+                </div>
+
+                <h2 class="text-center">Login</h2>
+
+
+                <form (ngSubmit)="onSubmit()">
+                    <mat-form-field class="full-width">
+                        <label>UserName</label>
+                        <input required [(ngModel)]="credentials.userName" name="username"
+                        type="text" #control1="ngModel" matInput/>
+                        <mat-error *ngIf="control1.invalid && control1.invalid">  
+                            <div *ngIf="control1.errors?.['required']">Name is required</div>  
+                        </mat-error>  
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <label>Password</label>
+                        <input required [(ngModel)]="credentials.password" name="password"
+                        type="password" #control1="ngModel" matInput/>
+                        <mat-error *ngIf="control1.invalid && control1.invalid">  
+                            <div *ngIf="control1.errors?.['required']">password is required</div>  
+                        </mat-error> 
+                    </mat-form-field>
+                    <br>
+                    <br>
+                    <div class="container text-center">
+                        <button type="submit" class="btn btn-success">Login</button>
+                        <button type="reset" class="btn btn-danger" style="margin-left: 10px;">Reset</button>
+                        
+                    </div>
+                </form>
+            </div>
+            <br>
+            <br>
+    </div>
+    <br>
+    <br>
+</div>

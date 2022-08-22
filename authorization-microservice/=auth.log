@@ -1,0 +1,193 @@
+2022-08-22 09:37:30.154  WARN [authorizationService,,] 12580 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h24m38s93ms506µs100ns).
+2022-08-22 09:41:21.895 ERROR [authorizationService,,] 12580 --- [http-nio-9090-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2022-08-22T04:53:08Z. Current time: 2022-08-22T09:41:21Z, a difference of 17293881 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.cognizant.util.JwtUtil.extractAllClaims(JwtUtil.java:33) ~[classes/:na]
+	at com.cognizant.util.JwtUtil.extractClaim(JwtUtil.java:29) ~[classes/:na]
+	at com.cognizant.util.JwtUtil.extractUsername(JwtUtil.java:21) ~[classes/:na]
+	at com.cognizant.filter.JwtFilter.doFilterInternal(JwtFilter.java:50) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:89) ~[spring-cloud-sleuth-instrumentation-3.0.3.jar:3.0.3]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:114) ~[spring-cloud-sleuth-autoconfigure-3.0.3.jar:3.0.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-08-22 09:41:21.977 ERROR [authorizationService,,] 12580 --- [http-nio-9090-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2022-08-22T04:53:08Z. Current time: 2022-08-22T09:41:21Z, a difference of 17293976 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.cognizant.util.JwtUtil.extractAllClaims(JwtUtil.java:33) ~[classes/:na]
+	at com.cognizant.util.JwtUtil.extractClaim(JwtUtil.java:29) ~[classes/:na]
+	at com.cognizant.util.JwtUtil.extractUsername(JwtUtil.java:21) ~[classes/:na]
+	at com.cognizant.filter.JwtFilter.doFilterInternal(JwtFilter.java:50) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.7.jar:5.4.7]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:89) ~[spring-cloud-sleuth-instrumentation-3.0.3.jar:3.0.3]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:114) ~[spring-cloud-sleuth-autoconfigure-3.0.3.jar:3.0.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-08-22 09:42:28.555  INFO [authorizationService,,] 11312 --- [restartedMain] c.c.AuthorizationMicroserviceApplication : Starting AuthorizationMicroserviceApplication using Java 17.0.3.1 on Sarvesh with PID 11312 (C:\Users\Dell\Desktop\pmsclientangular\authorization-microservice\target\classes started by Dell in C:\Users\Dell\Desktop\pmsclientangular\authorization-microservice)
+2022-08-22 09:42:28.560  INFO [authorizationService,,] 11312 --- [restartedMain] c.c.AuthorizationMicroserviceApplication : No active profile set, falling back to default profiles: default
+2022-08-22 09:42:28.657  INFO [authorizationService,,] 11312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-22 09:42:28.663  INFO [authorizationService,,] 11312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-22 09:42:30.236  INFO [authorizationService,,] 11312 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-22 09:42:30.337  INFO [authorizationService,,] 11312 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 1 JPA repository interfaces.
+2022-08-22 09:42:31.385  INFO [authorizationService,,] 11312 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=42971748-5b02-3186-83df-d82d61b4e2f8
+2022-08-22 09:42:32.748  INFO [authorizationService,,] 11312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-08-22 09:42:32.765  INFO [authorizationService,,] 11312 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-22 09:42:32.766  INFO [authorizationService,,] 11312 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-08-22 09:42:32.912  INFO [authorizationService,,] 11312 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-22 09:42:32.914  INFO [authorizationService,,] 11312 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4249 ms
+2022-08-22 09:42:33.021  INFO [authorizationService,,] 11312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-22 09:42:33.291  INFO [authorizationService,,] 11312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-22 09:42:33.306  INFO [authorizationService,,] 11312 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testDB'
+2022-08-22 09:42:33.706  INFO [authorizationService,,] 11312 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-22 09:42:33.806  INFO [authorizationService,,] 11312 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-08-22 09:42:34.064  INFO [authorizationService,,] 11312 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-22 09:42:34.276  INFO [authorizationService,,] 11312 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-22 09:42:35.343  INFO [authorizationService,,] 11312 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-22 09:42:35.362  INFO [authorizationService,,] 11312 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-22 09:42:36.563  INFO [authorizationService,,] 11312 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-22 09:42:36.839  WARN [authorizationService,,] 11312 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-22 09:42:37.838  INFO [authorizationService,,] 11312 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35dce191, org.springframework.security.web.context.SecurityContextPersistenceFilter@25cd8b04, org.springframework.security.web.header.HeaderWriterFilter@4546218c, org.springframework.security.web.authentication.logout.LogoutFilter@1054dd96, com.cognizant.filter.JwtFilter@3998fdae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7203e6d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4310afff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@192e49b1, org.springframework.security.web.session.SessionManagementFilter@2140c8e9, org.springframework.security.web.access.ExceptionTranslationFilter@28e6200, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1fb31149]
+2022-08-22 09:42:38.960  INFO [authorizationService,,] 11312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-08-22 09:42:39.085  INFO [authorizationService,,] 11312 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-08-22 09:42:39.112  INFO [authorizationService,,] 11312 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-08-22 09:42:39.130  INFO [authorizationService,,] 11312 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-22 09:42:39.324  INFO [authorizationService,,] 11312 --- [restartedMain] c.c.AuthorizationMicroserviceApplication : Started AuthorizationMicroserviceApplication in 11.517 seconds (JVM running for 12.412)
+2022-08-22 09:43:49.745  INFO [authorizationService,,] 11312 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-22 09:43:49.746  INFO [authorizationService,,] 11312 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-22 09:43:49.751  INFO [authorizationService,,] 11312 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-08-22 09:43:49.968  INFO [authorizationService,abc96c7a58aab715,7b287c2b51a0b3a7] 11312 --- [http-nio-9090-exec-1] c.c.controller.AuthorizationController   : STARTED - generateToken
+2022-08-22 09:43:49.972  INFO [authorizationService,abc96c7a58aab715,7b287c2b51a0b3a7] 11312 --- [http-nio-9090-exec-1] c.c.service.CustomUserDetailService      : STARTED - loadUserByUsername
+2022-08-22 09:43:50.217  INFO [authorizationService,abc96c7a58aab715,7b287c2b51a0b3a7] 11312 --- [http-nio-9090-exec-1] c.c.service.CustomUserDetailService      : END - loadUserByUsername
+2022-08-22 09:43:50.222  INFO [authorizationService,abc96c7a58aab715,7b287c2b51a0b3a7] 11312 --- [http-nio-9090-exec-1] c.c.controller.AuthorizationController   : END - generateToken
+2022-08-22 09:44:18.123  INFO [authorizationService,00a91c410c43c1f8,8242a240b2998a51] 11312 --- [http-nio-9090-exec-2] c.c.service.CustomUserDetailService      : STARTED - loadUserByUsername
+2022-08-22 09:44:18.205  INFO [authorizationService,00a91c410c43c1f8,8242a240b2998a51] 11312 --- [http-nio-9090-exec-2] c.c.service.CustomUserDetailService      : END - loadUserByUsername
+2022-08-22 09:44:18.227  INFO [authorizationService,00a91c410c43c1f8,8242a240b2998a51] 11312 --- [http-nio-9090-exec-2] c.c.controller.AuthorizationController   : STARTED - authorization
+2022-08-22 09:44:18.228  INFO [authorizationService,00a91c410c43c1f8,8242a240b2998a51] 11312 --- [http-nio-9090-exec-2] c.c.service.CustomUserDetailService      : STARTED - loadUserByUsername
+2022-08-22 09:44:18.230  INFO [authorizationService,00a91c410c43c1f8,8242a240b2998a51] 11312 --- [http-nio-9090-exec-2] c.c.service.CustomUserDetailService      : END - loadUserByUsername
+2022-08-22 09:44:18.234  INFO [authorizationService,00a91c410c43c1f8,8242a240b2998a51] 11312 --- [http-nio-9090-exec-2] c.c.controller.AuthorizationController   : END - authorization
+2022-08-22 09:44:18.355  INFO [authorizationService,00a91c410c43c1f8,92d30953dc4abc5e] 11312 --- [http-nio-9090-exec-3] c.c.service.CustomUserDetailService      : STARTED - loadUserByUsername
+2022-08-22 09:44:18.356  INFO [authorizationService,00a91c410c43c1f8,92d30953dc4abc5e] 11312 --- [http-nio-9090-exec-3] c.c.service.CustomUserDetailService      : END - loadUserByUsername
+2022-08-22 09:44:18.362  INFO [authorizationService,00a91c410c43c1f8,92d30953dc4abc5e] 11312 --- [http-nio-9090-exec-3] c.c.controller.AuthorizationController   : STARTED - authorization
+2022-08-22 09:44:18.365  INFO [authorizationService,00a91c410c43c1f8,92d30953dc4abc5e] 11312 --- [http-nio-9090-exec-3] c.c.service.CustomUserDetailService      : STARTED - loadUserByUsername
+2022-08-22 09:44:18.367  INFO [authorizationService,00a91c410c43c1f8,92d30953dc4abc5e] 11312 --- [http-nio-9090-exec-3] c.c.service.CustomUserDetailService      : END - loadUserByUsername
+2022-08-22 09:44:18.371  INFO [authorizationService,00a91c410c43c1f8,92d30953dc4abc5e] 11312 --- [http-nio-9090-exec-3] c.c.controller.AuthorizationController   : END - authorization
+2022-08-22 09:45:23.166  INFO [authorizationService,a68a0c7a5d2fdc23,55b4486f0fea7673] 11312 --- [http-nio-9090-exec-6] c.c.service.CustomUserDetailService      : STARTED - loadUserByUsername
+2022-08-22 09:45:23.170  INFO [authorizationService,a68a0c7a5d2fdc23,55b4486f0fea7673] 11312 --- [http-nio-9090-exec-6] c.c.service.CustomUserDetailService      : END - loadUserByUsername
+2022-08-22 09:45:23.177  INFO [authorizationService,a68a0c7a5d2fdc23,55b4486f0fea7673] 11312 --- [http-nio-9090-exec-6] c.c.controller.AuthorizationController   : STARTED - authorization
+2022-08-22 09:45:23.179  INFO [authorizationService,a68a0c7a5d2fdc23,55b4486f0fea7673] 11312 --- [http-nio-9090-exec-6] c.c.service.CustomUserDetailService      : STARTED - loadUserByUsername
+2022-08-22 09:45:23.180  INFO [authorizationService,a68a0c7a5d2fdc23,55b4486f0fea7673] 11312 --- [http-nio-9090-exec-6] c.c.service.CustomUserDetailService      : END - loadUserByUsername
+2022-08-22 09:45:23.185  INFO [authorizationService,a68a0c7a5d2fdc23,55b4486f0fea7673] 11312 --- [http-nio-9090-exec-6] c.c.controller.AuthorizationController   : END - authorization
+2022-08-22 09:45:23.214  INFO [authorizationService,a68a0c7a5d2fdc23,6941865116b9257f] 11312 --- [http-nio-9090-exec-8] c.c.service.CustomUserDetailService      : STARTED - loadUserByUsername
+2022-08-22 09:45:23.216  INFO [authorizationService,a68a0c7a5d2fdc23,6941865116b9257f] 11312 --- [http-nio-9090-exec-8] c.c.service.CustomUserDetailService      : END - loadUserByUsername
+2022-08-22 09:45:23.221  INFO [authorizationService,a68a0c7a5d2fdc23,6941865116b9257f] 11312 --- [http-nio-9090-exec-8] c.c.controller.AuthorizationController   : STARTED - authorization
+2022-08-22 09:45:23.223  INFO [authorizationService,a68a0c7a5d2fdc23,6941865116b9257f] 11312 --- [http-nio-9090-exec-8] c.c.service.CustomUserDetailService      : STARTED - loadUserByUsername
+2022-08-22 09:45:23.226  INFO [authorizationService,a68a0c7a5d2fdc23,6941865116b9257f] 11312 --- [http-nio-9090-exec-8] c.c.service.CustomUserDetailService      : END - loadUserByUsername
+2022-08-22 09:45:23.228  INFO [authorizationService,a68a0c7a5d2fdc23,6941865116b9257f] 11312 --- [http-nio-9090-exec-8] c.c.controller.AuthorizationController   : END - authorization
+2022-08-22 09:46:21.113  INFO [authorizationService,fdc44490bd99653c,26051a4ef61d978c] 11312 --- [http-nio-9090-exec-7] c.c.controller.AuthorizationController   : STARTED - generateToken
+2022-08-22 09:46:21.114  INFO [authorizationService,fdc44490bd99653c,26051a4ef61d978c] 11312 --- [http-nio-9090-exec-7] c.c.service.CustomUserDetailService      : STARTED - loadUserByUsername
+2022-08-22 09:46:21.118  INFO [authorizationService,fdc44490bd99653c,26051a4ef61d978c] 11312 --- [http-nio-9090-exec-7] c.c.service.CustomUserDetailService      : END - loadUserByUsername
+2022-08-22 09:46:21.120  INFO [authorizationService,fdc44490bd99653c,26051a4ef61d978c] 11312 --- [http-nio-9090-exec-7] c.c.controller.AuthorizationController   : END - generateToken

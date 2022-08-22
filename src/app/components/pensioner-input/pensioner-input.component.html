@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="bootstrap-wrapper">
+        <div class="container mt">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h1 class="text-center">Calculate Pension Amount</h1>
+                    <form (ngSubmit)="onSubmit()">
+                        <mat-form-field class="full-width">
+                            <mat-label>Name</mat-label>
+                            <input required [(ngModel)]="credentials.name" name="name"
+                            type="text" #control1="ngModel" matInput/>
+                            <mat-error *ngIf="control1.invalid && control1.invalid">  
+                                <div *ngIf="control1.errors?.['required']">name is required</div>  
+                            </mat-error> 
+                        </mat-form-field>
+        
+                        <mat-form-field class="full-width">
+                            <mat-label>Date Of Birth</mat-label>
+                            <input required [(ngModel)]="credentials.dateOfBirth" name="dateOfBirth"
+                            type="text" #control1="ngModel" matInput/>
+                            <mat-error *ngIf="control1.invalid && control1.invalid">  
+                                <div *ngIf="control1.errors?.['required']">date of birth is required</div>  
+                            </mat-error> 
+                        </mat-form-field>
+                       
+                        <mat-form-field class="full-width">
+                            <mat-label>Pan Number</mat-label>
+                            <input required [(ngModel)]="credentials.panNumber" name="panNumber"
+                            type="text" #control1="ngModel" matInput/>
+                            <mat-error *ngIf="control1.invalid && control1.invalid">  
+                                <div *ngIf="control1.errors?.['required']">pan number is required</div>  
+                            </mat-error> 
+                        </mat-form-field>
+                        
+                        <mat-form-field class="full-width">
+                            <mat-label>Aadhaar Number</mat-label>
+                            <input required [(ngModel)]="credentials.aadhaarNumber" name="aadhaarNumber"
+                            type="text" #control1="ngModel" matInput/>
+                            <mat-error *ngIf="control1.invalid && control1.invalid">  
+                                <div *ngIf="control1.errors?.['required']">aadhaar number is required</div>  
+                            </mat-error> 
+                        </mat-form-field>
+                        
+                        <mat-form-field class="full-width">
+                            <mat-label>Pension Type</mat-label>
+                            <input required [(ngModel)]="credentials.pensionType" name="pensionType"
+                            type="text" #control1="ngModel" matInput/>
+                            <mat-error *ngIf="control1.invalid && control1.invalid">  
+                                <div *ngIf="control1.errors?.['required']">pension type is required</div>  
+                            </mat-error> 
+                        </mat-form-field>
+                        
+                        <br>
+                        <br>
+                        <div class="container text-center">
+                            <button type="submit" class="btn btn-success">Calculate Pension</button>
+                            <button type="reset" class="btn btn-danger" style="margin-left: 10px;">Reset</button>
+                            
+                        </div>
+                    </form>
+                </div >
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="">
+        <table  class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Date-Of-Birth</th>
+                    <th>Pan Number</th>
+                    <th>Pension Type</th>
+                    <th>Pension Amount</th>
+            </tr>
+            </thead>
+           <tbody> 
+            <tr *ngFor="let data of pension">
+                    <td>{{data.name}}</td>
+                    <td>{{data.dateOfBirth}}</td>
+                    <td>{{data.panNumber}}</td>
+                    <td>{{data.pensiontype}}</td>
+                    <td>{{data.pensionAmount}}</td>
+                </tr>
+            </tbody>
+         </table>
+    </div>
+    </div>
+    
+    
