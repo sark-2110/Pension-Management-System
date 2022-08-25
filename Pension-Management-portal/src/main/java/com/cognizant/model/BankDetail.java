@@ -14,7 +14,9 @@ public class BankDetail {
 	private String bankName;
 	private String accountNumber;
 	private String bankType;
-	
+	public BankDetail() {
+		// TODO Auto-generated constructor stub
+	}
 	public BankDetail(String bankName, String accountNumber, String bankType) {
 		super();
 		this.bankName = bankName;

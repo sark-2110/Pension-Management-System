@@ -16,15 +16,17 @@ public class PensionerInput {
 	private String panNumber;
 	private String aadhaarNumber;
 	private String pensionType;
-	
-//	public PensionerInput(String name, String dateOfBirth, String panNumber, String aadhaarNumber, String pensionType) {
-//		super();
-//		this.name = name;
-//		this.dateOfBirth = dateOfBirth;
-//		this.panNumber = panNumber;
-//		this.aadhaarNumber = aadhaarNumber;
-//		this.pensionType = pensionType;
-//	}
+	public PensionerInput() {
+		// TODO Auto-generated constructor stub
+	}
+	public PensionerInput(String name, String dateOfBirth, String panNumber, String aadhaarNumber, String pensionType) {
+		super();
+		this.name = name;
+		this.dateOfBirth = dateOfBirth;
+		this.panNumber = panNumber;
+		this.aadhaarNumber = aadhaarNumber;
+		this.pensionType = pensionType;
+	}
 	public String getName() {
 		return name;
 	}

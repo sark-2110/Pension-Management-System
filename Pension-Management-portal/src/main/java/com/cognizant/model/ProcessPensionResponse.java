@@ -10,6 +10,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProcessPensionResponse {
+	public ProcessPensionResponse() {
+		// TODO Auto-generated constructor stub
+	}
 
 	private int processPensionStatusCode;
 

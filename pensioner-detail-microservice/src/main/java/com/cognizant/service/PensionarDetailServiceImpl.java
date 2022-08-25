@@ -61,12 +61,12 @@ public class PensionarDetailServiceImpl{
 			}
 
 		} catch (IOException e) {
-			LOGGER.error("EXCEPTION - savePensionerData");
+			LOGGER.error("EXCEPTION - savePensionerData ");
 			throw new ResourceNotFoundException("pensioner detail not added");
 		}
 		
 		pensionerDetailRepository.saveAll(pensionerDetailList);
-		LOGGER.info("END - savePensionerData");
+		LOGGER.info("END - savePensionerData "+pensionerDetailList);
 	}
 
 }

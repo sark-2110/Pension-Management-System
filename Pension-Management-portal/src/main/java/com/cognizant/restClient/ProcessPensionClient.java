@@ -14,7 +14,7 @@ import com.cognizant.model.PensionerInput;
 import com.cognizant.model.ProcessPensionInput;
 import com.cognizant.model.ProcessPensionResponse;
 
-@FeignClient(name = "ProcessPensionService", url="http://localhost:9084")
+@FeignClient(name = "ProcessPensionService", url="http://localhost:8083")
 public interface ProcessPensionClient {
 	
 	ProcessPensionResponse ProcessPensionResponse = null;

@@ -12,11 +12,14 @@ import lombok.Setter;
 public class Token {
 
 	String token;
-	
-//	public Token(String token) {
-//		super();
-//		this.token = token;
-//	}
+
+	public Token(String token) {
+		super();
+		this.token = token;
+	}
+	public Token() {
+		// TODO Auto-generated constructor stub
+	}
 	public String getToken() {
 		return token;
 	}

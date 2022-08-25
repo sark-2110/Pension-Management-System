@@ -23,7 +23,7 @@ export class AuthInterceptor implements HttpInterceptor{
 
                   catchError((error:HttpErrorResponse)=>
                   {
-                    alert("error code: "+error.status+"\n"+`HTTP Error: ${request.url}`);
+                    //alert("error code: "+error.status+"\n"+`HTTP Error: ${request.url}`);
                     return throwError(console.error);  
                   })
      )            

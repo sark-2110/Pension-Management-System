@@ -1,0 +1,33 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+  pre_build:
+    commands:
+    - echo Logging in to Amazon ECR
+    - aws -version
+    - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 860061945305.dkr.ecr.us-west-2.amazonaws.com
+    - IMAGE_NAME=pension-portal
+    - IMAGE_URI=  860061945305.dkr.ecr.us-west-2.amazonaws.com/pension-portal:latest
+    - CONTAINER_NAME=pension-portal
+  build:
+    commands:
+    - echo Build started on `date`
+    - echo $IMAGE_NAME
+    - mvn clean package -Ddockerfile.skip
+    - docker build -t $IMAGE_NAME .
+  post_build:
+    commands:
+    - echo Build completed on `date`
+    - echo $(docker images)
+    - doker tag $IMAGE_NAME $IMAGE_URI
+    - echo Pushing docker image
+    - docker push $IMAGE_URI
+    - echo push completed
+    -  printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $IMAGE_URI > imagedefinitions.json
+artifacts:
+  files:
+  - imagedefinitions.json
+  - Pension-Management-portal-0.0.1-SNAPSHOT.jar
+  - .ebextensions/**/*

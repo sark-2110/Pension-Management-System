@@ -21,6 +21,9 @@ public class PensionerDetail {
 	private String pensionType;
 	private BankDetail bankDetail;
 	
+	public PensionerDetail() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public PensionerDetail(String aadhaarNumber, String name, String dateOfBirth, String panNumber, double salary,
 			double allowance, String pensionType, BankDetail bankDetail) {

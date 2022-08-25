@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-west-2:860061945305:task-definition/pension-manage-portal-task:1"
+        LoadBalancerInfo:
+          ContainerName: "pension-portal"
+          ContainerPort: 9085
+	PlatformVersion: "LATEST"

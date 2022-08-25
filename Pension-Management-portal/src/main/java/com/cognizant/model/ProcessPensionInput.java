@@ -15,7 +15,9 @@ public class ProcessPensionInput {
 	private String aadhaarNumber;
 	private double pensionAmount;
 	private double bankServiceCharge;
-	
+	public ProcessPensionInput() {
+		// TODO Auto-generated constructor stub
+	}
 	public ProcessPensionInput(String aadhaarNumber, double pensionAmount, double bankServiceCharge) {
 		super();
 		this.aadhaarNumber = aadhaarNumber;

@@ -1,110 +1,33 @@
-2022-08-22 09:37:28.690  WARN [,,] 19896 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h24m38s97ms628µs900ns).
-2022-08-22 09:41:21.869  INFO [,340e101d6ec7ce0d,340e101d6ec7ce0d] 19896 --- [http-nio-9085-exec-9] c.c.controller.PensionController         : STARTED - getStatusCode
-2022-08-22 09:41:21.932 ERROR [,340e101d6ec7ce0d,340e101d6ec7ce0d] 19896 --- [http-nio-9085-exec-9] c.c.controller.PensionController         : EXCEPTION - getStatusCode
-2022-08-22 09:41:21.935  WARN [,340e101d6ec7ce0d,340e101d6ec7ce0d] 19896 --- [http-nio-9085-exec-9] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [com.cognizant.exception.ResourceNotFoundException: enter a valid token]
-2022-08-22 09:41:21.971  INFO [,3002aa2e15e77323,3002aa2e15e77323] 19896 --- [http-nio-9085-exec-10] c.c.controller.PensionController         : STARTED - getStatusCode
-2022-08-22 09:41:21.988 ERROR [,3002aa2e15e77323,3002aa2e15e77323] 19896 --- [http-nio-9085-exec-10] c.c.controller.PensionController         : EXCEPTION - getStatusCode
-2022-08-22 09:41:21.989  WARN [,3002aa2e15e77323,3002aa2e15e77323] 19896 --- [http-nio-9085-exec-10] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [com.cognizant.exception.ResourceNotFoundException: enter a valid token]
-2022-08-22 09:43:07.456  INFO [,,] 17924 --- [restartedMain] c.c.PensionManagementPortalApplication   : Starting PensionManagementPortalApplication using Java 17.0.3.1 on Sarvesh with PID 17924 (C:\Users\Dell\Desktop\pmsclientangular\Pension-Management-portal\target\classes started by Dell in C:\Users\Dell\Desktop\pmsclientangular\Pension-Management-portal)
-2022-08-22 09:43:07.464  INFO [,,] 17924 --- [restartedMain] c.c.PensionManagementPortalApplication   : No active profile set, falling back to default profiles: default
-2022-08-22 09:43:07.560  INFO [,,] 17924 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-08-22 09:43:07.564  INFO [,,] 17924 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-08-22 09:43:09.001  INFO [,,] 17924 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-22 09:43:09.037  INFO [,,] 17924 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
-2022-08-22 09:43:09.551  INFO [,,] 17924 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3d5e1bd0-6913-3011-955f-95199941f2dc
-2022-08-22 09:43:10.874  INFO [,,] 17924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9085 (http)
-2022-08-22 09:43:10.892  INFO [,,] 17924 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-22 09:43:10.894  INFO [,,] 17924 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2022-08-22 09:43:11.029  INFO [,,] 17924 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-08-22 09:43:11.031  INFO [,,] 17924 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3465 ms
-2022-08-22 09:43:11.142  INFO [,,] 17924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-08-22 09:43:11.392  INFO [,,] 17924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-08-22 09:43:11.411  INFO [,,] 17924 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dad23db5-fd88-465a-b2b4-9360bfc7fbc2'
-2022-08-22 09:43:12.113  INFO [,,] 17924 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-22 09:43:12.202  INFO [,,] 17924 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2022-08-22 09:43:12.429  INFO [,,] 17924 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-22 09:43:12.606  INFO [,,] 17924 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-22 09:43:12.874  INFO [,,] 17924 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-22 09:43:12.891  INFO [,,] 17924 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-22 09:43:12.956  WARN [,,] 17924 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-08-22 09:43:13.180  WARN [,,] 17924 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-22 09:43:15.051  INFO [,,] 17924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9085 (http) with context path ''
-2022-08-22 09:43:15.176  INFO [,,] 17924 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-22 09:43:15.198  INFO [,,] 17924 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-22 09:43:15.213  INFO [,,] 17924 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-22 09:43:15.413  INFO [,,] 17924 --- [restartedMain] c.c.PensionManagementPortalApplication   : Started PensionManagementPortalApplication in 8.707 seconds (JVM running for 9.581)
-2022-08-22 09:43:49.222  INFO [,,] 17924 --- [http-nio-9085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-22 09:43:49.222  INFO [,,] 17924 --- [http-nio-9085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-08-22 09:43:49.226  INFO [,,] 17924 --- [http-nio-9085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2022-08-22 09:43:49.580  INFO [,abc96c7a58aab715,abc96c7a58aab715] 17924 --- [http-nio-9085-exec-2] c.c.controller.PensionController         : STARTED - doLogin
-2022-08-22 09:43:50.703  INFO [,abc96c7a58aab715,abc96c7a58aab715] 17924 --- [http-nio-9085-exec-2] c.c.controller.PensionController         : END - doLogin
-2022-08-22 09:43:51.765  INFO [,ade0664837107a3e,ade0664837107a3e] 17924 --- [http-nio-9085-exec-4] c.c.controller.PensionController         : STARTED - allDetail
-2022-08-22 09:43:52.943  INFO [,ade0664837107a3e,ade0664837107a3e] 17924 --- [http-nio-9085-exec-4] c.c.controller.PensionController         : END - allDetail
-2022-08-22 09:43:56.845  INFO [,3c19580a1a9a60e9,3c19580a1a9a60e9] 17924 --- [http-nio-9085-exec-6] c.c.controller.PensionController         : STARTED - allDetail
-2022-08-22 09:43:56.892  INFO [,3c19580a1a9a60e9,3c19580a1a9a60e9] 17924 --- [http-nio-9085-exec-6] c.c.controller.PensionController         : END - allDetail
-2022-08-22 09:44:18.067  INFO [,00a91c410c43c1f8,00a91c410c43c1f8] 17924 --- [http-nio-9085-exec-7] c.c.controller.PensionController         : STARTED - getStatusCode
-2022-08-22 09:44:18.249  INFO [,00a91c410c43c1f8,00a91c410c43c1f8] 17924 --- [http-nio-9085-exec-7] c.c.controller.PensionController         : END - getStatusCode
-2022-08-22 09:45:23.157  INFO [,a68a0c7a5d2fdc23,a68a0c7a5d2fdc23] 17924 --- [http-nio-9085-exec-10] c.c.controller.PensionController         : STARTED - getPensionDetail
-2022-08-22 09:45:23.362  INFO [,a68a0c7a5d2fdc23,a68a0c7a5d2fdc23] 17924 --- [http-nio-9085-exec-10] c.c.controller.PensionController         : END - getPensionDetail
-2022-08-22 09:46:21.087  INFO [,fdc44490bd99653c,fdc44490bd99653c] 17924 --- [http-nio-9085-exec-3] c.c.controller.PensionController         : STARTED - doLogin
-2022-08-22 09:46:21.132  INFO [,fdc44490bd99653c,fdc44490bd99653c] 17924 --- [http-nio-9085-exec-3] c.c.controller.PensionController         : END - doLogin
-2022-08-22 09:52:08.341  INFO [,,] 17924 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-22 09:52:08.342  INFO [,,] 17924 --- [Thread-1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-22 09:52:08.581  WARN [,,] 17924 --- [Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2022-08-22 09:52:08.598  INFO [,,] 17924 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-08-22 09:52:08.606  INFO [,,] 17924 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-08-22 09:52:08.919  INFO [,,] 17924 --- [restartedMain] c.c.PensionManagementPortalApplication   : Starting PensionManagementPortalApplication using Java 17.0.3.1 on Sarvesh with PID 17924 (C:\Users\Dell\Desktop\pmsclientangular\Pension-Management-portal\target\classes started by Dell in C:\Users\Dell\Desktop\pmsclientangular\Pension-Management-portal)
-2022-08-22 09:52:08.920  INFO [,,] 17924 --- [restartedMain] c.c.PensionManagementPortalApplication   : No active profile set, falling back to default profiles: default
-2022-08-22 09:52:10.033  INFO [,,] 17924 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-22 09:52:10.044  INFO [,,] 17924 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
-2022-08-22 09:52:10.237  INFO [,,] 17924 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3d5e1bd0-6913-3011-955f-95199941f2dc
-2022-08-22 09:52:10.521  INFO [,,] 17924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9085 (http)
-2022-08-22 09:52:10.522  INFO [,,] 17924 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-22 09:52:10.523  INFO [,,] 17924 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2022-08-22 09:52:10.577  INFO [,,] 17924 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-08-22 09:52:10.578  INFO [,,] 17924 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1614 ms
-2022-08-22 09:52:10.635  INFO [,,] 17924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-08-22 09:52:10.638  INFO [,,] 17924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-08-22 09:52:10.639  INFO [,,] 17924 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:0f027b20-d0c2-4cb4-ba76-3309f9be8201'
-2022-08-22 09:52:10.939  INFO [,,] 17924 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-22 09:52:10.948  INFO [,,] 17924 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-22 09:52:10.965  INFO [,,] 17924 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-22 09:52:10.966  INFO [,,] 17924 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-22 09:52:10.996  WARN [,,] 17924 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-08-22 09:52:11.105  WARN [,,] 17924 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-22 09:52:12.889  INFO [,,] 17924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9085 (http) with context path ''
-2022-08-22 09:52:13.038  INFO [,,] 17924 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-22 09:52:13.039  INFO [,,] 17924 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-22 09:52:13.043  INFO [,,] 17924 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-22 09:52:13.102  INFO [,,] 17924 --- [restartedMain] c.c.PensionManagementPortalApplication   : Started PensionManagementPortalApplication in 4.378 seconds (JVM running for 547.27)
-2022-08-22 09:52:13.109  INFO [,,] 17924 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-08-22 09:52:15.725  INFO [,,] 17924 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-22 09:52:15.725  INFO [,,] 17924 --- [Thread-7] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2022-08-22 09:52:15.939  WARN [,,] 17924 --- [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2022-08-22 09:52:15.940  INFO [,,] 17924 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2022-08-22 09:52:15.941  INFO [,,] 17924 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2022-08-22 09:52:16.204  INFO [,,] 17924 --- [restartedMain] c.c.PensionManagementPortalApplication   : Starting PensionManagementPortalApplication using Java 17.0.3.1 on Sarvesh with PID 17924 (C:\Users\Dell\Desktop\pmsclientangular\Pension-Management-portal\target\classes started by Dell in C:\Users\Dell\Desktop\pmsclientangular\Pension-Management-portal)
-2022-08-22 09:52:16.205  INFO [,,] 17924 --- [restartedMain] c.c.PensionManagementPortalApplication   : No active profile set, falling back to default profiles: default
-2022-08-22 09:52:16.775  INFO [,,] 17924 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-22 09:52:16.783  INFO [,,] 17924 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
-2022-08-22 09:52:16.923  INFO [,,] 17924 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=60f09d21-bb00-35c1-bf24-fae06d3cab68
-2022-08-22 09:52:17.120  INFO [,,] 17924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9085 (http)
-2022-08-22 09:52:17.121  INFO [,,] 17924 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-22 09:52:17.122  INFO [,,] 17924 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2022-08-22 09:52:17.182  INFO [,,] 17924 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-08-22 09:52:17.186  INFO [,,] 17924 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 974 ms
-2022-08-22 09:52:17.230  INFO [,,] 17924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2022-08-22 09:52:17.236  INFO [,,] 17924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2022-08-22 09:52:17.236  INFO [,,] 17924 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:e01f35b4-77f1-47bf-846b-b4af203a0339'
-2022-08-22 09:52:17.501  INFO [,,] 17924 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-22 09:52:17.510  INFO [,,] 17924 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-08-22 09:52:17.534  INFO [,,] 17924 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-22 09:52:17.539  INFO [,,] 17924 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-22 09:52:17.582  WARN [,,] 17924 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-08-22 09:52:17.686  WARN [,,] 17924 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-22 09:52:18.716  INFO [,,] 17924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9085 (http) with context path ''
-2022-08-22 09:52:18.845  INFO [,,] 17924 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-08-22 09:52:18.849  INFO [,,] 17924 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-08-22 09:52:18.856  INFO [,,] 17924 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-08-22 09:52:18.914  INFO [,,] 17924 --- [restartedMain] c.c.PensionManagementPortalApplication   : Started PensionManagementPortalApplication in 2.902 seconds (JVM running for 553.081)
-2022-08-22 09:52:18.928  INFO [,,] 17924 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-25 20:55:19.042  INFO [,,] 6788 --- [restartedMain] c.c.PensionManagementPortalApplication   : Starting PensionManagementPortalApplication using Java 17.0.3.1 on Sarvesh with PID 6788 (C:\Users\Dell\Desktop\pmsclientangular\Pension-Management-portal\target\classes started by Dell in C:\Users\Dell\Desktop\pmsclientangular\Pension-Management-portal)
+2022-08-25 20:55:19.052  INFO [,,] 6788 --- [restartedMain] c.c.PensionManagementPortalApplication   : No active profile set, falling back to default profiles: default
+2022-08-25 20:55:19.228  INFO [,,] 6788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-25 20:55:19.229  INFO [,,] 6788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-25 20:55:25.227  INFO [,,] 6788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-25 20:55:25.293  INFO [,,] 6788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JPA repository interfaces.
+2022-08-25 20:55:27.374  INFO [,,] 6788 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=60f09d21-bb00-35c1-bf24-fae06d3cab68
+2022-08-25 20:55:30.518  INFO [,,] 6788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-08-25 20:55:30.544  INFO [,,] 6788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-25 20:55:30.545  INFO [,,] 6788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-08-25 20:55:30.806  INFO [,,] 6788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-25 20:55:30.807  INFO [,,] 6788 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11575 ms
+2022-08-25 20:55:31.268  INFO [,,] 6788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-25 20:55:31.989  INFO [,,] 6788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-25 20:55:32.035  INFO [,,] 6788 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:0465b633-9b1e-41a0-a244-9172a2c126bd'
+2022-08-25 20:55:33.174  INFO [,,] 6788 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-25 20:55:33.295  INFO [,,] 6788 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-08-25 20:55:34.325  INFO [,,] 6788 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-25 20:55:34.721  INFO [,,] 6788 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-25 20:55:35.246  INFO [,,] 6788 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-25 20:55:35.270  INFO [,,] 6788 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-25 20:55:35.509  WARN [,,] 6788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-08-25 20:55:36.088  WARN [,,] 6788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-25 20:55:42.170  INFO [,,] 6788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-08-25 20:55:42.845  INFO [,,] 6788 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-08-25 20:55:42.892  INFO [,,] 6788 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-08-25 20:55:42.930  INFO [,,] 6788 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-25 20:55:43.282  INFO [,,] 6788 --- [restartedMain] c.c.PensionManagementPortalApplication   : Started PensionManagementPortalApplication in 26.262 seconds (JVM running for 29.448)
+2022-08-25 20:55:53.100  INFO [,,] 6788 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-25 20:55:53.100  INFO [,,] 6788 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-25 20:55:53.106  INFO [,,] 6788 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-08-25 20:55:53.621  INFO [,e9f9d36cbba06c8e,e9f9d36cbba06c8e] 6788 --- [http-nio-8082-exec-2] c.c.controller.PensionController         : STARTED - doLogin
+2022-08-25 20:55:55.284  INFO [,e9f9d36cbba06c8e,e9f9d36cbba06c8e] 6788 --- [http-nio-8082-exec-2] c.c.controller.PensionController         : END - doLogin

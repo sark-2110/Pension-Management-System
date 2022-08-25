@@ -17,14 +17,18 @@ public class PensionDetail {
 	private String pensiontype;
 	private double pensionAmount;
 	
-//	public PensionDetail(String name, String dateOfBirth, String panNumber, String pensiontype, double pensionAmount) {
-//		super();
-//		this.name = name;
-//		this.dateOfBirth = dateOfBirth;
-//		this.panNumber = panNumber;
-//		this.pensiontype = pensiontype;
-//		this.pensionAmount = pensionAmount;
-//	}
+	public PensionDetail() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public PensionDetail(String name, String dateOfBirth, String panNumber, String pensiontype, double pensionAmount) {
+		super();
+		this.name = name;
+		this.dateOfBirth = dateOfBirth;
+		this.panNumber = panNumber;
+		this.pensiontype = pensiontype;
+		this.pensionAmount = pensionAmount;
+	}
 
 	public String getName() {
 		return name;

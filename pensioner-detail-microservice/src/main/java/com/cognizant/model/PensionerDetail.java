@@ -87,4 +87,10 @@ public class PensionerDetail {
 	public void setBankDetail(BankDetail bankDetail) {
 		this.bankDetail = bankDetail;
 	}
+	@Override
+	public String toString() {
+		return "PensionerDetail [aadhaarNumber=" + aadhaarNumber + ", name=" + name + ", dateOfBirth=" + dateOfBirth
+				+ ", panNumber=" + panNumber + ", salary=" + salary + ", allowance=" + allowance + ", pensionType="
+				+ pensionType + ", bankDetail=" + bankDetail + "]";
+	}
 }
